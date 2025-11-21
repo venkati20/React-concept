@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root{
+             --primary-color:brown;
+            --custom-height:550px;
+        }
+        .container{
+            border: 1px solid black;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            height: 600px;
+            align-items: center;
+        }
+        .box{
+            /* --primary-color:brown;
+            --custom-height:550px; */
+            border: 1px solid black;
+            background-color:var(--primary-color);
+            width: 300px;
+            height: var(--custom-height);
+            padding: 3px;
+            /* box-shadow: -10px -20px red; */
+            /* box-shadow: 10px 20px red; */
+            /* box-shadow: 20px 20px 100px red ; */
+            /* box-shadow: 20px 20px 100px 40px red ; */
+            box-shadow: inset 10px 20px red;
+        }
+        #logo{
+            /* text-shadow: 12px 13px 3px rgb(247, 250, 247); */
+            /* text-shadow: yellow 3px 3px 2px; */
+               text-shadow:  3px 3px yellow ,2px 2px red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        <img src="./logoo.png">
+        <p id="logo">this is logo</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nostrum quaerat impedit harum voluptatibus quisquam fuga ducimus suscipit similique laudantium?</p>
+    </div>
+</div>
+    
+</body>
+</html>
