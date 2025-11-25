@@ -442,29 +442,30 @@
 // export default App
 
 
-import React,{useState,useMemo} from 'react'
+// import React,{useState,useMemo} from 'react'
 
-const App = () => {
-  const[count,setCount]=useState(0)
-  const[input,setInput]=useState(0)
+// const App = () => {
+//   const[count,setCount]=useState(0)
+//   const[input,setInput]=useState(0)
 
-  function expensiveCount(num){
-    console.log("exoensive count")
-    for(let i=0;i<=10000000;i++)
-      return num*2
+//   function expensiveCount(num){
+//     console.log("exoensive count")
+//     for(let i=0;i<=10000000;i++)
+//       return num*2
     
-  }
-  let doubleValue= useMemo(()=>expensiveCount(input),[input])
-  return (
-    <div>
-      <p>count:{count}</p>
-      <button onClick={()=>{
-        setCount(count=>count+1)
-      }}>couunt add</button>
-      <input type='number' value={input} onChange={(e)=>{setInput(e.target.value)}}/>
-      <p> doublecount:{doubleValue}</p>
-    </div>
-  )
-}
+//   }
+//   let doubleValue= useMemo(()=>expensiveCount(input),[input])
+//   return (
+//     <div>
+//       <p>count:{count}</p>
+//       <button onClick={()=>{
+//         setCount(count=>count+1)
+//       }}>couunt add</button>
+//       <input type='number' value={input} onChange={(e)=>{setInput(e.target.value)}}/>
+//       <p> doublecount:{doubleValue}</p>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
