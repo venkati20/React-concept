@@ -469,3 +469,44 @@
 
 // export default App
 
+
+
+// const App = () => {
+//   return (
+//     <div>
+//         <h1>gel</h1>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import { useReducer } from "react";
+let initialState=0
+const counterReducer=(state,action)=>{
+    switch(action.type){
+     case 'dec':return state-1;
+     case 'inc':return state+1;
+     case 'reset': return 0
+     default:return initialState
+    }
+}
+const App=()=>{
+    const[counter,dispatch]=useReducer(counterReducer,initialState)
+    return(
+        <>
+        <button onClick={()=>{
+            dispatch({type:'dec'})
+        }}>dec</button>
+        <p>counter:{counter}</p>
+        <button onClick={()=>{
+            dispatch({type:'inc'})
+        }}>inc</button>
+         <button onClick={()=>{
+            dispatch({type:'reset'})
+        }}>reset</button>
+        </>
+    )
+}
+export default App
